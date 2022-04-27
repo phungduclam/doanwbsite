@@ -26,8 +26,6 @@ var shoppingCart = (function () {
     loadCart();
   }
 
-  console.log(cart);
-
   // =============================
   // Public methods and propeties
   // =============================

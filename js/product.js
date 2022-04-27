@@ -5,10 +5,17 @@ var product = [
     img: "watch1.jpg",
     price: 335600,
     detail: {
-      color: "trắng",
       warrantee: "quốc tế 2 năm ",
+      color: "trắng",
       resistance: "3 ATM(30m)",
+      DangMatso: "vuông",
+      LoaiDay: "Dây Inox(thép không gỉ)",
+      LoaiKinh: "Mineral Crystal (Kính Cứng)",
+      LoaiPin: "Pin (Quartz)",
+      SizeMatSo: "45mm",
+      Hang: "Casio",
     },
+
     type: 1,
   },
   {
@@ -17,9 +24,15 @@ var product = [
     img: "watch2.jpg",
     price: 400000,
     detail: {
-      color: "trắng",
       warrantee: "quốc tế 2 năm ",
+      color: "trắng",
       resistance: "3 ATM(30m)",
+      DangMatso: "vuông",
+      LoaiDay: "Dây Inox(thép không gỉ)",
+      LoaiKinh: "Mineral Crystal (Kính Cứng)",
+      LoaiPin: "Pin (Quartz)",
+      SizeMatSo: "45mm",
+      Hang: "Casio",
     },
     type: 1,
   },
@@ -29,9 +42,15 @@ var product = [
     img: "watch3.jpg",
     price: 350000,
     detail: {
-      color: "trắng",
       warrantee: "quốc tế 2 năm ",
+      color: "trắng",
       resistance: "3 ATM(30m)",
+      DangMatso: "vuông",
+      LoaiDay: "Dây Inox(thép không gỉ)",
+      LoaiKinh: "Mineral Crystal (Kính Cứng)",
+      LoaiPin: "Pin (Quartz)",
+      SizeMatSo: "45mm",
+      Hang: "Casio",
     },
     type: 1,
   },
@@ -41,9 +60,15 @@ var product = [
     img: "watch4.jpg",
     price: 564000,
     detail: {
-      color: "trắng",
       warrantee: "quốc tế 2 năm ",
+      color: "trắng",
       resistance: "3 ATM(30m)",
+      DangMatso: "vuông",
+      LoaiDay: "Dây Inox(thép không gỉ)",
+      LoaiKinh: "Mineral Crystal (Kính Cứng)",
+      LoaiPin: "Pin (Quartz)",
+      SizeMatSo: "45mm",
+      Hang: "Casio",
     },
     type: 1,
   },
@@ -54,9 +79,15 @@ var product = [
     img: "orient1.jpg",
     price: 564000,
     detail: {
-      color: "trắng",
       warrantee: "quốc tế 2 năm ",
+      color: "trắng",
       resistance: "3 ATM(30m)",
+      DangMatso: "vuông",
+      LoaiDay: "Dây Inox(thép không gỉ)",
+      LoaiKinh: "Mineral Crystal (Kính Cứng)",
+      LoaiPin: "Pin (Quartz)",
+      SizeMatSo: "45mm",
+      Hang: "Casio",
     },
     type: 2,
   },
@@ -67,9 +98,15 @@ var product = [
     img: "orient2.jpg",
     price: 564000,
     detail: {
-      color: "trắng",
       warrantee: "quốc tế 2 năm ",
+      color: "trắng",
       resistance: "3 ATM(30m)",
+      DangMatso: "vuông",
+      LoaiDay: "Dây Inox(thép không gỉ)",
+      LoaiKinh: "Mineral Crystal (Kính Cứng)",
+      LoaiPin: "Pin (Quartz)",
+      SizeMatSo: "45mm",
+      Hang: "Casio",
     },
     type: 2,
   },
@@ -80,9 +117,15 @@ var product = [
     img: "orient3.jpg",
     price: 564000,
     detail: {
-      color: "trắng",
       warrantee: "quốc tế 2 năm ",
+      color: "trắng",
       resistance: "3 ATM(30m)",
+      DangMatso: "vuông",
+      LoaiDay: "Dây Inox(thép không gỉ)",
+      LoaiKinh: "Mineral Crystal (Kính Cứng)",
+      LoaiPin: "Pin (Quartz)",
+      SizeMatSo: "45mm",
+      Hang: "Casio",
     },
     type: 2,
   },
@@ -93,9 +136,15 @@ var product = [
     img: "orient4.jpg",
     price: 564000,
     detail: {
-      color: "trắng",
       warrantee: "quốc tế 2 năm ",
+      color: "trắng",
       resistance: "3 ATM(30m)",
+      DangMatso: "vuông",
+      LoaiDay: "Dây Inox(thép không gỉ)",
+      LoaiKinh: "Mineral Crystal (Kính Cứng)",
+      LoaiPin: "Pin (Quartz)",
+      SizeMatSo: "45mm",
+      Hang: "Casio",
     },
     type: 2,
   },
@@ -106,9 +155,15 @@ var product = [
     img: "tissot1.jpg",
     price: 564000,
     detail: {
-      color: "trắng",
       warrantee: "quốc tế 2 năm ",
+      color: "trắng",
       resistance: "3 ATM(30m)",
+      DangMatso: "vuông",
+      LoaiDay: "Dây Inox(thép không gỉ)",
+      LoaiKinh: "Mineral Crystal (Kính Cứng)",
+      LoaiPin: "Pin (Quartz)",
+      SizeMatSo: "45mm",
+      Hang: "Casio",
     },
     type: 3,
   },
@@ -119,9 +174,15 @@ var product = [
     img: "tissot2.jpg",
     price: 564000,
     detail: {
-      color: "trắng",
       warrantee: "quốc tế 2 năm ",
+      color: "trắng",
       resistance: "3 ATM(30m)",
+      DangMatso: "vuông",
+      LoaiDay: "Dây Inox(thép không gỉ)",
+      LoaiKinh: "Mineral Crystal (Kính Cứng)",
+      LoaiPin: "Pin (Quartz)",
+      SizeMatSo: "45mm",
+      Hang: "Casio",
     },
     type: 3,
   },
@@ -132,9 +193,15 @@ var product = [
     img: "tissot3.jpg",
     price: 564000,
     detail: {
-      color: "trắng",
       warrantee: "quốc tế 2 năm ",
+      color: "trắng",
       resistance: "3 ATM(30m)",
+      DangMatso: "vuông",
+      LoaiDay: "Dây Inox(thép không gỉ)",
+      LoaiKinh: "Mineral Crystal (Kính Cứng)",
+      LoaiPin: "Pin (Quartz)",
+      SizeMatSo: "45mm",
+      Hang: "Casio",
     },
     type: 3,
   },
@@ -145,9 +212,15 @@ var product = [
     img: "tissot7.jpg",
     price: 564000,
     detail: {
-      color: "trắng",
       warrantee: "quốc tế 2 năm ",
+      color: "trắng",
       resistance: "3 ATM(30m)",
+      DangMatso: "vuông",
+      LoaiDay: "Dây Inox(thép không gỉ)",
+      LoaiKinh: "Mineral Crystal (Kính Cứng)",
+      LoaiPin: "Pin (Quartz)",
+      SizeMatSo: "45mm",
+      Hang: "Casio",
     },
     type: 3,
   },
@@ -177,8 +250,9 @@ if (localStorage.getItem("listProduct") == null) {
 function renderProduct(dataProduct, selector) {
   var listproduct = "";
   for (const data of dataProduct) {
-    var listproduct = '<div  class="col-lg-3 col-md-6 col-sm-6 col-6 mt-3" > ';
-    listproduct += '<div   class="card product p-2" styte="width:auto">';
+    var listproduct =
+      '<div   class="col-lg-3 col-md-6 col-sm-6 col-6 mt-3 watchProduct" > ';
+    listproduct += '<div   class="card product" styte="width:auto">';
     listproduct +=
       '<a ><img  class="proo card-img-top" data-id="' +
       data.id +
@@ -190,6 +264,8 @@ function renderProduct(dataProduct, selector) {
       data.price +
       '" data-type="' +
       data.type +
+      '" data-detail="' +
+      encodeURIComponent(JSON.stringify(data.detail)) +
       '" src="img/' +
       data.img +
       '" alt="..."></a>';
@@ -202,13 +278,15 @@ function renderProduct(dataProduct, selector) {
       data.img +
       '" data-type="' +
       data.type +
+      '" data-detail="' +
+      encodeURIComponent(JSON.stringify(data.detail)) +
       '" data-price="' +
       data.price +
       '">' +
       data.name +
       "</a></div>";
     listproduct +=
-      '<div class="price text-center h6">' + data.price + "₫</div>";
+      '<div class="price text-center h6 mb-3">' + data.price + "₫</div>";
     listproduct +=
       '<span class="text-center add-to-cart add-cart btn btn-outline-warning" data-id="' +
       data.id +

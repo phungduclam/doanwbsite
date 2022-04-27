@@ -23,12 +23,15 @@ function handleClick() {
     var img = $(this).data("img");
     var price = Number($(this).data("price"));
     var type = $(this).data("type");
+    var detail = $(this).attr("data-detail");
+
     var item = {
       id,
       name,
       img,
       price,
       type,
+      detail: JSON.parse(decodeURIComponent(detail)),
     };
     pro.push(item);
     saveproduct();
@@ -100,8 +103,58 @@ var ProductLocal = function () {
   Cproduct += "</div>        ";
   Cproduct += "</div>";
   Cproduct += "</div>";
+  Cproduct += `
+  <table class='table mt-5'>
+    <tbody>
+      <tr>
+        <th width="40%">Màu</th>
+        <td style="text-align:right">${data1.detail.color}</td>
+      </tr>
+      <tr>
+        <th width="40%">Bảo hành</th>
+        <td style="text-align:right">${data1.detail.warrantee}</td>
+      </tr>
+      <tr>
+        <th width="40%">Kháng nước</th>
+        <td style="text-align:right">${data1.detail.resistance}</td>
+      </tr>
+
+      <tr>
+        <th width="40%">Dạng mặt số</th>
+        <td style="text-align:right">${data1.detail.DangMatso}</td>
+      </tr>
+
+      <tr>
+        <th width="40%">Loại dây</th>
+        <td style="text-align:right">${data1.detail.LoaiDay}</td>
+      </tr>
+
+      <tr>
+        <th width="30%">Loại kính</th>
+        <td style="text-align:right">${data1.detail.LoaiKinh}</td>
+      </tr>
+
+      <tr>
+        <th width="40%">Loại pin</th>
+        <td style="text-align:right">${data1.detail.LoaiPin}</td>
+      </tr>
+
+      <tr>
+        <th width="40%">Size mặt số</th>
+        <td style="text-align:right">${data1.detail.SizeMatSo}</td>
+      </tr>
+
+      <tr>
+        <th width="40%">Hãng</th>
+        <td style="text-align:right">${data1.detail.Hang}</td>
+      </tr>
+      
+    </tbody>
+  </table>`;
   Cproduct += "</div>";
+
   Cproduct += "</div>";
+
   if (document.getElementById("chitiet")) {
     document.getElementById("chitiet").innerHTML = Cproduct;
   }
@@ -124,6 +177,8 @@ function renderProductRelated(dataProduct, selector) {
       data.price +
       '" data-type="' +
       data.type +
+      '" data-detail="' +
+      encodeURIComponent(JSON.stringify(data.detail)) +
       '" src="img/' +
       data.img +
       '" alt="..."></a>';
@@ -138,6 +193,8 @@ function renderProductRelated(dataProduct, selector) {
       data.price +
       '" data-type="' +
       data.type +
+      '" data-detail="' +
+      encodeURIComponent(JSON.stringify(data.detail)) +
       '">' +
       data.name +
       "</a></div>";

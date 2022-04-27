@@ -141,6 +141,9 @@
                             <th>Img</th>
                             <th>Price</th>
                             <th>Action</th>
+                            <th>Type</th>
+                            <th>Detail</th>
+
                         </tr>
                     </thead>
                     <tbody class="text-center" id="product-admin">
@@ -166,7 +169,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="" class="form-row">
+                        <form action="#" class="form-row">
                             <!-- <div class="col-12">
                                 <input class="form-control" type="text" id="id" placeholder="id">
                             </div> -->
@@ -174,12 +177,23 @@
                                 <input class="form-control" type="text" id="name" placeholder="name">
                             </div>
                             <div class="col-12 mt-3">
-                                <input class="form-control" type="text" id="img" placeholder="img">
+                                <h6 style="font-weight: bold"> Choose Img</h6>
+                                <input type="file" id="myfile" name="myfile">
+                                <!-- <input class="form-control" type="text" id="img" placeholder="img"> -->
                             </div>
                             <div class="col-12 mt-3">
                                 <input class="form-control" type="number" id="price" placeholder="giá">
                             </div>
-                            <a class="btn btn-outline-danger mt-3" href="" onclick="addProduct()">Thêm</a>
+
+                            <div class="col-12 mt-3">
+                                <input class="form-control" type="number" id="type" placeholder="loại">
+                            </div>
+
+                            <div class="col-12 mt-3">
+                                <input class="form-control" type="text" id="price" placeholder="chi tiết sản phẩm">
+                            </div>
+
+                            <button class="btn btn-outline-danger mt-3" onclick="addProduct()">Thêm</button>
                         </form>
 
                     </div>
@@ -213,6 +227,12 @@
                             </div>
                             <div class="col-12 mt-3">
                                 <input class="form-control" type="number" id="priced" placeholder="giá">
+                            </div>
+                            <div class="col-12 mt-3">
+                                <input class="form-control" type="number" id="typed" placeholder="loai">
+                            </div>
+                            <div class="col-12 mt-3">
+                                <input class="form-control" type="text" id="detaild" placeholder="thong so chi tiet">
                             </div>
                             <div id="submitUpdate" >Cập nhật</div>
                         </form>
