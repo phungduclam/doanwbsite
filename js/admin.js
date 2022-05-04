@@ -77,22 +77,25 @@ var updateProduct = function (i) {
   document.getElementById("imgd").value = k.img;
   document.getElementById("priced").value = k.price;
   document.getElementById("typed").value = k.type;
-  document.getElementById("detaild").value = k.detail;
 
   document.getElementById("idd").setAttribute("disabled", "disabled");
-  document.getElementById("submitUpdate").innerHTML =
-    '<button class="btn btn-outline-danger mt-3" onclick="submitUpdate(' +
+
+  document.getElementById("update-product").innerHTML =
+    '<button class="btn btn-outline-danger mt-3" onclick="submitUpdateProduct(' +
     i +
-    ')"> Đồng ý</button>';
+    ')"> Cập nhật</button>';
 };
-var submitUpdate = function (i) {
+var submitUpdateProduct = function (i) {
+  alert("Thành công");
+
   var k = product[i];
   k.id = document.getElementById("idd").value;
   k.name = document.getElementById("named").value;
   k.img = document.getElementById("imgd").value;
   k.price = document.getElementById("priced").value;
-  k.type = document.getElementById("Typed").value;
-  k.detail = document.getElementById("Detaild").value;
+  k.type = Number(document.getElementById("typed").value);
+
+  console.log(k);
   // document.getElementById("idd").setAttribute("disabled","disabled");
   localStorage.setItem("listProduct", JSON.stringify(product));
   window.location.reload();

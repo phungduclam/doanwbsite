@@ -137,7 +137,8 @@
                     <thead class="thead-light text-center">
                         <tr>
                             <th>ID đơn</th>
-                            <th>Tổng</th>
+                            <th>Mô tả</th>
+                            <th>Tổng tiền</th>
                             <th>Khách hàng</th>
                             <th>Điện thoại</th>
                             <th>Email</th>
@@ -146,8 +147,8 @@
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody class="text-center" id="donhang">
-                     
+                    <tbody class="text-center" id="order-admin">
+                        
                     </tbody>
 
                 </table>
@@ -158,7 +159,7 @@
 
 
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -208,7 +209,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="modal fade" id="updateProduct" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog">
@@ -230,8 +231,12 @@
                                 <input class="form-control" type="text" id="don-user">
                             </div>
                             <div class="col-6 mt-3">
-                                <label for="">Tổng đơn</label>
+                                <label for="">Tổng tiền</label>
                                 <input class="form-control" type="text" id="don-total">
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="">Số đơn</label>
+                                <input class="form-control" type="text" id="don-soluong">
                             </div>
                             <div class="col-6 mt-3">
                                 <label for="">Điện thoại</label>
@@ -254,7 +259,7 @@
                                     <option value="Đã hủy">Đã hủy</option>
                                 </select>
                             </div>
-                            <div class="col-12"  id="Update"></div>
+                            <div class="col-12"  id="Update-orders"></div>
                             
 
                     </div>
@@ -271,10 +276,9 @@
     crossorigin="anonymous"></script>
 <script src="../js/scripts.js"></script>
 <script src="../js/product.js"></script>
-<script src="../js/user.js"></script>
 <script src="../js/admin.js"></script>
-<script src="../js/admin-user.js"></script>
 <script src="../js/donhang.js"></script>
+<script src="../js/admin-orders.js"></script>
 
 <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>

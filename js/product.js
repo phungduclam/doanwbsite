@@ -311,8 +311,6 @@ var listLocal = function () {
   let productsSkirt = product.filter((item) => item.type === 1);
   let productsShirt = product.filter((item) => item.type === 2);
   let productsPants = product.filter((item) => item.type === 3);
-  console.log(product);
-  console.log(productsShirt);
 
   renderProduct(productsSkirt, "productsSkirt");
   renderProduct(productsShirt, "productsShirt");

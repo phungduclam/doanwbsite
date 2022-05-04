@@ -20,6 +20,7 @@ var donhangAdmin = function () {
     var listproduct1 = "<tr>";
     listproduct1 += "<td>" + data.id + "</td>";
     listproduct1 += "<td>" + data.total + " VNĐ</td>";
+    listproduct1 += "<td>" + data.soluong + " VNĐ</td>";
     listproduct1 += "<td>" + data.user + "</td>";
     listproduct1 += "<td>" + data.phone + "</td>";
     listproduct1 += "<td>" + data.email + "</td>";

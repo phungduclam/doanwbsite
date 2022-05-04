@@ -22,7 +22,7 @@ var shoppingCart = (function () {
   function loadCart() {
     cart = JSON.parse(sessionStorage.getItem("shoppingCart"));
   }
-  if (sessionStorage.getItem("shoppingCart") != null) {
+  if (sessionStorage.getItem("shoppingCart") !== null) {
     loadCart();
   }
 

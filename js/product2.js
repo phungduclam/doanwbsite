@@ -57,6 +57,7 @@ var ProductLocal = function () {
   loadproduct();
   var Cproduct = "";
   var data1 = pro[pro.length - 1];
+
   Cproduct += "<h3>Sản phẩm/" + data1.name + "</h3>";
   Cproduct += '<div class="sanpham">';
   Cproduct += '<div class="hinhanh mt-3">';
@@ -164,7 +165,8 @@ function renderProductRelated(dataProduct, selector) {
   var listproduct = "";
   for (const data of dataProduct) {
     // var data = JSON.parse(JSON.stringify(product[i]));
-    var listproduct = '<div   class="col-lg-3 col-md-6 col-sm-6 col-6 mt-3">';
+    var listproduct =
+      '<div   class="col-lg-3 col-md-6 col-sm-6 col-6 mt-3 ProductRelated">';
     listproduct += '<div class="card product p-2" styte="width:auto">';
     listproduct +=
       '<a ><img  class="proo card-img-top" data-id="' +
