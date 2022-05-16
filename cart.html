@@ -59,19 +59,11 @@
                             <i class="fas fa-user"></i>
                         </a>
 
-
                         <a class="ml-3 mr-3" href="./cart.html">
                             <i class="fas fa-shopping-cart"></i>
                         </a>
 
-                    </div>
-                    <div class="form-inline search">
-                        <input type="text" class="form-control" placeholder="Search..">
-                        <button type="submit" class="form-control btn">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-
+                    </div>                   
                 </div>
             </nav>
         </div>
@@ -90,13 +82,13 @@
                             </th>
                             <th width="30%">Tên
                             </th>
-                            <th width="10%">Đơn giá
+                            <th width="15%">Đơn giá
                             </th>
                             <th width="25%">Số lượng
                             </th>
-                            <th width="15%">Tổng
+                            <th width="15%">Tổng Tiền
                             </th>
-                            <th> Xóa
+                            <th > Xóa
                             </th>
                         </tr>
                     </thead>
@@ -140,21 +132,10 @@
                     </div>
                    
                 </div>
-
-
-
-
             </div>
-          
-
         </div>
-
-
-
     </div>
-
     <div class="container-fluid">
-
         <!-- --thongtin-- -->
         <div class="container info">
 
@@ -163,7 +144,7 @@
                     <div class="h6">
                         GỌI MUA HÀNG(8:30 - 17:00)
                     </div>
-                    <a href="tel:0395342134">
+                    <a href="tel:0389458767">
 
                         <i class="fas fa-phone-alt"></i>
                        0389458767
@@ -174,7 +155,7 @@
                 <div class="col-3 info-col">
                     <div class="h6">GỌI MUA HÀNG(8:30 - 17:00) </div>
 
-                    <a href="tel:0395342134">
+                    <a href="tel:0389458767">
                         <i class="fas fa-phone-alt"></i>
                        0389458767
                     </a>
@@ -210,13 +191,11 @@
                         <div class="col-3">
                             <a href="">
                                 <i class="fab fa-twitter"></i>
-
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
         <!-- ---- -->
         <!-- --footer-- -->
@@ -231,7 +210,7 @@
                             </li>
                         
                             <li>
-                                <a href="about.html">Chính Sách Bảo Mật</a>
+                                <a href="policy.html">Chính Sách Bảo Mật</a>
                             </li>
 
                             <li>
@@ -243,7 +222,7 @@
                         <div class="h6">HỆ THỐNG CỬA HÀNG</div>
                         <ul>
                             <li>
-                                Zero Shop
+                                SHOPDONGHO.COM
                             </li>
                             <li class="text">
                                 Địa chỉ: Chung Cư Đông Hải, Tô Ký, Tân Chánh Hiệp, Quận 12 
@@ -293,8 +272,12 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+
+                
                 <div class="modal-body">
-                  
+
+                    <form name="form1" method="GET" action="process-action.html" onsubmit = " validateForm()">
+                        
                         <div class="form-row">
                             <div class="form-group col-6">
                                 <label for="">Họ Tên Người Nhận</label>
@@ -305,68 +288,78 @@
                             </div>
                             <div class="form-group col-6">
                                 <label for="">Số điện thoại</label>
-                                <input type="number" class="form-control" id="inputsdt">
+                                <input type="number" class="form-control" id="inputsdt" placeholder="vui long nhap dung so ">
                                 <div class="require-cart sdt text-danger">
                                     Vui lòng nhập số điện thoại
                                   </div>
                             </div>
                         </div>
+                   
+                       
                         <div class="form-row">
-                            <div class="form-group col-8">
+                            <div class="form-group col-6">
                                 <label for="">Địa chỉ</label>
-                                <input type="text" class="form-control" id="inputdiachi">
+                                <input type="text" class="form-control" id="inputdiachi" placeholder="">
                                 <div class="require-cart diachi text-danger">
                                     Vui lòng nhập địa chỉ
                                   </div>
+                                  
                             </div>
-                            <div class="form-group col-4">
-                                <label for="">Hình thức thanh toán</label>
-                                <select class="form-control" name="" id="inputthanhtoan" class="btn"
+                            <div class="form-group col-6">
+                                <label for="">Thanh toán</label>
+                                <div>
+                                <select class="" name="" id="inputthanhtoan" class="btn"
                                     style="border: 1px black solid;">
-                                    <option value="0" selected> Chọn hình thức thanh toán</option>
-
+                                    
                                     <option value="1">Thanh toán bằng tiền mặt</option>
-                                    <option value="2">InternetBanking</option>
-                                    <option value="3">VisaCard</option>
-                                    <option value="4">Paypal</option>
                                 </select>
+                            </div>
                                 <div class="require-cart thanhtoan text-danger">
                                     Vui lòng chọn hình thức thanh toán
                                   </div>
                             </div>
+                            
+                           
+
+                        </div>
+                        <div class="form-row">
                             <div class="form-group col-6">
                                 <label for="">Tỉnh - Thành phố</label>
-                                <select id="inputtinh" class="form-control">
-                                    <option value="0" selected>Chọn</option>
+                                <select id="inputtinh" class="form-control">                              
                                     <option value="1">Hà Nội</option>
                                     <option value="2">Đà Nẵng</option>
                                     <option value="3">Hồ Chí Minh</option>
                                     <option value="4">Bình Định</option>
                                     <option value="5">Quảng Ngãi</option>
                                 </select>
+                                <label style="font-style: italic;" for="">Chỉ áp dụng trên những tỉnh nằm trong danh sách</label>
                                 <div class="require-cart tinh text-danger">
                                     Vui lòng chọn tỉnh
                                   </div>
                             </div>
                             <div class="form-group col-6">
                                 <label for="">Email</label>
-                                <input type="email" class="form-control" id="inputemail">
+                                <input name="text1" type="email" required="chỉ nhập email" class="form-control" id="inputemail">
+                               
                                 <div class="require-cart email text-danger">
                                     Vui lòng nhập Email
                                   </div>
                             </div>
-                           
                             <div class=" form-group col-12">
                                 <label for="">Ghi chú</label>
                                 <textarea class="form-control" name="" id="inputghichu" cols="30" rows="3"></textarea>
                             </div>
-
                         </div>
+                  
+                        
+                  
+
                         <div class="modal-footer">
-                            <button onclick="checkCart()" class="btn cartt btn-primary">Xác Nhận đặt hàng</button>
+                            <button type="button" data-dismiss="modal" aria-label="Close"  class="btn cartt btn-primary" style="background-color: red;">Hủy</button>
+                            <button onclick="checkCart();ValidateEmail()" class="btn cartt btn-primary">Xác Nhận đặt hàng</button>
                         </div>
                         <!-- data-target="#xacnhan" data-dismiss="modal"-->
-                   
+                        </form>
                 </div>
             </div>
         </div>
@@ -390,7 +383,6 @@
                 </div>
                 <div class="modal-footer">
                     <a href="index.html" class="clear-cart btn btn-outline-danger">Xong</a>
-
                 </div>
             </div>
         </div>
@@ -428,14 +420,13 @@
                                 <div class="col-4 mt-2 text-primary">Số tiền cần trả:</div>
                             <div class="col-8 mt-2">
                                 <span class="total-cart total-1"></span>
-                                Đ
+                                VNĐ
                             </div>
 
                         </div>
 
                     </div>
                     <div class="text-right">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
                         <button class="btn btn-outline-danger text-right" onclick="xacnhan()"
                             >Xác nhận đặt hàng</button>
                     </div>

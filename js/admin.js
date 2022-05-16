@@ -24,7 +24,7 @@ var productAdmin = function () {
       '<td><img src="../img/' +
       data.img +
       '" alt="" style="width: 50px;"></td>';
-    listproduct1 += "<td>" + data.price + "</td>";
+    listproduct1 += "<td>" + data.price + " ₫</td>";
     //  listproduct1+='';
     listproduct1 +=
       '<td><button onclick="updateProduct(' +
@@ -50,8 +50,8 @@ var addProduct = function () {
     name: document?.getElementById("name")?.value ?? null,
     img: fileInput?.files[0]?.name ?? null,
     price: document?.getElementById("price")?.value ?? null,
-    type: document?.getElementById("type")?.value ?? null,
-    detail: document?.getElementById("detail")?.value ?? null,
+    // type: document?.getElementById("type")?.value ?? null,
+    // detail: document?.getElementById("detail")?.value ?? null,
   };
   if (Product.name && Product.img && Product.price) {
     product.push(Product);
@@ -67,6 +67,7 @@ var deleteProduct = function (i) {
   product.splice(i, 1);
   localStorage.setItem("listProduct", JSON.stringify(product));
   window.location.reload();
+  alert("đã xóa sản phẩm")
 };
 
 // Sửa sản phẩm
@@ -74,26 +75,26 @@ var updateProduct = function (i) {
   var k = product[i];
   document.getElementById("idd").value = k.id;
   document.getElementById("named").value = k.name;
-  document.getElementById("imgd").value = k.img;
+  // document.getElementById("imgdd").value = k.img;
   document.getElementById("priced").value = k.price;
-  document.getElementById("typed").value = k.type;
-
+  
   document.getElementById("idd").setAttribute("disabled", "disabled");
 
   document.getElementById("update-product").innerHTML =
-    '<button class="btn btn-outline-danger mt-3" onclick="submitUpdateProduct(' +
-    i +
-    ')"> Cập nhật</button>';
+  '<button class="btn btn-outline-danger mt-3" onclick="submitUpdateProduct(' +
+  i +
+  ')"> Đồng ý</button>';
 };
 var submitUpdateProduct = function (i) {
   alert("Thành công");
-
+console.log(document.getElementById("imgdd"));
   var k = product[i];
   k.id = document.getElementById("idd").value;
   k.name = document.getElementById("named").value;
-  k.img = document.getElementById("imgd").value;
+  if (document.getElementById("imgdd").files[0]?.name) {
+    k.img = document.getElementById("imgdd").files[0].name;
+  }
   k.price = document.getElementById("priced").value;
-  k.type = Number(document.getElementById("typed").value);
 
   console.log(k);
   // document.getElementById("idd").setAttribute("disabled","disabled");

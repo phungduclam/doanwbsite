@@ -222,3 +222,56 @@ function logOut() {
   localStorage.setItem("signup", JSON.stringify(signupArr));
   saveLogin();
 }
+
+function validateForm()  {
+  var name = document.getElementById("inputnguoinhan").value;
+  var tel = document.getElementById("inputsdt").value;
+  var address = document.getElementById("inputdiachi").value;
+  var payment = document.getElementById("inputthanhtoan").value;
+  var province = document.getElementById("inputtinh").value;
+  var email = document.getElementById("inputemail").value;
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+  if(name== "") {
+      alert("Please enter your Username");
+      return false;
+  }
+  if(tel == "") {
+      alert("Please enter you Password");
+      return false;
+  }
+
+  if(address == "") {
+    alert("Please enter you Password");
+    return false;
+}
+
+if(payment == "") {
+  alert("Please enter you Password");
+  return false;
+}
+
+if(province == "") {
+  alert("Please enter you Password");
+  return false;
+}
+
+
+if(email.match(mailformat))
+{
+document.form1.text1.focus();
+return true;
+} else if (email == ""){}
+else
+{
+alert("You have entered an invalid email address!");
+document.form1.text1.focus();
+return false;
+}
+}
+
+//cai nay de kiem tra neu gio hang khong co gi thi nut dat hang se bị mo khong dat dc
+function validateCheckItem(){
+ document.getElementsByClassName('btn-')
+}
+

@@ -13,32 +13,32 @@ loaddon();
 if (localStorage.getItem("listdon") != null) {
   loaddon();
 }
-var donhangAdmin = function () {
-  var listproduct1 = "";
-  for (var i in product) {
-    var data = JSON.parse(JSON.stringify(donhang[i]));
-    var listproduct1 = "<tr>";
-    listproduct1 += "<td>" + data.id + "</td>";
-    listproduct1 += "<td>" + data.total + " VNĐ</td>";
-    listproduct1 += "<td>" + data.soluong + " VNĐ</td>";
-    listproduct1 += "<td>" + data.user + "</td>";
-    listproduct1 += "<td>" + data.phone + "</td>";
-    listproduct1 += "<td>" + data.email + "</td>";
-    listproduct1 += "<td>" + data.address + "</td>";
-    listproduct1 += "<td>" + data.trangthai + "</td>";
-    //  listproduct1+='';
-    listproduct1 +=
-      '<td><button onclick="updatedonhang(' +
-      i +
-      ')" class="btn btn-outline-danger"  data-toggle="modal" data-target="#updateProduct"><i class="fas fa-cogs"></i></button>';
-    // listproduct1+='<button onclick="deleteProduct('
-    // +i+')" class="btn ml-1 btn-outline-warning"><i class="fas fa-trash"></i></button></td>';
-    listproduct1 += "</tr>";
+// var donhangAdmin = function () {
+//   var listproduct1 = "";
+//   for (var i in product) {
+//     var data = JSON.parse(JSON.stringify(donhang[i]));
+//     var listproduct1 = "<tr>";
+//     listproduct1 += "<td>" + data.id + "</td>";
+//     listproduct1 += "<td>" + data.total + " VNĐ</td>";
+//     listproduct1 += "<td>" + data.soluong + " VNĐ</td>";
+//     listproduct1 += "<td>" + data.user + "</td>";
+//     listproduct1 += "<td>" + data.phone + "</td>";
+//     listproduct1 += "<td>" + data.email + "</td>";
+//     listproduct1 += "<td>" + data.address + "</td>";
+//     listproduct1 += "<td>" + data.trangthai + "</td>";
+//     //  listproduct1+='';
+//     listproduct1 +=
+//       '<td><button onclick="updatedonhang(' +
+//       i +
+//       ')" class="btn btn-outline-danger"  data-toggle="modal" data-target="#updateProduct"><i class="fas fa-cogs"></i></button>';
+//     // listproduct1+='<button onclick="deleteProduct('
+//     // +i+')" class="btn ml-1 btn-outline-warning"><i class="fas fa-trash"></i></button></td>';
+//     listproduct1 += "</tr>";
 
-    document.getElementById("donhang").innerHTML += listproduct1;
-  }
-  // Save();
-};
+//     document.getElementById("donhang").innerHTML += listproduct1;
+//   }
+//   // Save();
+// };
 // Xóa sản phẩm
 var deleteProduct = function (i) {
   product.splice(i, 1);
@@ -66,6 +66,7 @@ var updatedonhang = function (i) {
 };
 var submitDon = function (i) {
   var k = donhang[i];
+  
   k.id = document.getElementById("don-id").value;
   k.user = document.getElementById("don-user").value;
   k.phone = document.getElementById("don-phone").value;
@@ -78,35 +79,32 @@ var submitDon = function (i) {
   window.location.reload();
 };
 
-var userAdmin = function () {
-  var listproduct = "";
-  for (var i in user) {
-    var data = JSON.parse(JSON.stringify(user[i]));
-    var listproduct = "<tr>";
-    listproduct += "<td>" + data.id + "</td>";
-    listproduct += "<td>" + data.username + "</td>";
-    //   listproduct+='<td><img src="../img/'+data.img+'" alt="" style="width: 50px;"></td>';
-    listproduct += "<td>" + data.email + "</td>";
-    //  listproduct1+='';
-    listproduct +=
-      '<td><button onclick="updateProduct(' +
-      i +
-      ')" class="btn btn-outline-danger"  data-toggle="modal" data-target="#updateProduct"><i class="fas fa-cogs"></i></button>';
-    listproduct +=
-      '<button onclick="deleteProduct(' +
-      i +
-      ')" class="btn ml-1 btn-outline-warning"><i class="fas fa-trash"></i></button></td>';
-    listproduct += "</tr>";
+// var userAdmin = function () {
+//   var listproduct = "";
+//   for (var i in user) {
+//     var data = JSON.parse(JSON.stringify(user[i]));
+//     var listproduct = "<tr>";
+//     listproduct += "<td>" + data.id + "</td>";
+//     listproduct += "<td>" + data.username + "</td>";
+//     //   listproduct+='<td><img src="../img/'+data.img+'" alt="" style="width: 50px;"></td>';
+//     listproduct += "<td>" + data.email + "</td>";
+//     //  listproduct1+='';
+//     listproduct +=
+//       '<td><button onclick="updateProduct(' +
+//       i +
+//       ')" class="btn btn-outline-danger"  data-toggle="modal" data-target="#updateProduct"><i class="fas fa-cogs"></i></button>';
+//     listproduct +=
+//       '<button onclick="deleteProduct(' +
+//       i +
+//       ')" class="btn ml-1 btn-outline-warning"><i class="fas fa-trash"></i></button></td>';
+//     listproduct += "</tr>";
 
-    document.getElementById("user-admin").innerHTML += listproduct;
-  }
-  // Save();
-};
-var options = function () {
-  var optionselect = "";
-};
+//     document.getElementById("user-admin").innerHTML += listproduct;
+//   }
+//   // Save();
+// };
 
-var getListOrderProduc = function () {
+var getListOrderProduct = function () {
   let loggedData = JSON.parse(localStorage.getItem("signup"));
   let listUser = JSON.parse(localStorage.getItem("listUser"));
 
@@ -124,16 +122,22 @@ var getListOrderProduc = function () {
   for (var data of myProduct) {
     console.log(data);
     for (var value of data.orderProduct) {
+      const total = value.count * value.price;
       orderProductHtml += "<tr>";
-
+      orderProductHtml += "<td>" + `<img style="width: 50px" src='../img/${value.img}'>` + "</td>";
       orderProductHtml += "<td>" + value.name + "</td>";
       orderProductHtml += "<td>" + value.price + "₫</td>";
       orderProductHtml += "<td>" + value.count + "</td>";
-      orderProductHtml += "</tr>";
+      orderProductHtml += "<td>" + total + "₫</td>";
+      
+      // orderProductHtml += "<td>" + value.name + "</td>";
+      // orderProductHtml += "<td>" + value.price + "₫</td>";
+      // orderProductHtml += "<td>" + value.count + "</td>";
+      // orderProductHtml += "</tr>";
     }
   }
   document.getElementById("ttdh").innerHTML = orderProductHtml;
 };
-getListOrderProduc();
-donhangAdmin();
-userAdmin();
+getListOrderProduct();
+// donhangAdmin();
+// userAdmin();

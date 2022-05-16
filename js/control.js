@@ -20,11 +20,16 @@ var shoppingCart = (function () {
 
   // Load cart
   function loadCart() {
-    cart = JSON.parse(sessionStorage.getItem("shoppingCart"));
+    if (JSON.parse(sessionStorage.getItem("shoppingCart"))) {
+
+      cart = JSON.parse(sessionStorage.getItem("shoppingCart"));
+    }
+    
+    if(cart?.length === 0 && document.querySelector('.btnOrderProducts')){
+      document.querySelector('.btnOrderProducts').innerHTML = 'Vui lòng thêm sản phẩm <a href="index.html">Chọn tại đây</a>'
+    }
   }
-  if (sessionStorage.getItem("shoppingCart") !== null) {
-    loadCart();
-  }
+  loadCart();
 
   // =============================
   // Public methods and propeties
@@ -38,7 +43,6 @@ var shoppingCart = (function () {
         cart[item].count++;
         saveCart();
         alert("Đã cập nhật thêm vào giỏ hàng");
-
         return;
       }
     }
@@ -133,12 +137,14 @@ var shoppingCart = (function () {
   // loadCart : Function
   return obj;
 })();
+
 var pro = [];
 
 function saveproduct() {
   sessionStorage.setItem("shopping", JSON.stringify(pro));
 }
-// Load cart
+
+// Load product
 function loadproduct() {
   pro = JSON.parse(sessionStorage.getItem("shopping"));
 }
@@ -207,6 +213,9 @@ function displayCart() {
   $(".show-cart-1").html(output);
   $(".total-cart").html(shoppingCart.totalCart());
   $(".total-count").html(shoppingCart.totalCount());
+  if(cart?.length === 0){
+      document.querySelector('.btnOrderProducts').innerHTML = 'Vui lòng thêm sản phẩm <a href="index.html">Chọn tại đây</a>'
+  }
 }
 
 $(".show-cart-1").on("click", ".delete-item", function (event) {
@@ -220,6 +229,7 @@ $(".show-cart-1").on("click", ".minus-item", function (event) {
   var id = $(this).data("id");
   shoppingCart.removeItemFromCart(id);
   displayCart();
+  alert('Đã xóa đi một sản phẩm')
 });
 // +1
 $(".show-cart-1").on("click", ".plus-item", function (event) {
@@ -328,7 +338,7 @@ var add_don = function () {
 
   var item = {
     id: donhang.length + 1,
-    user: document.getElementById("inputnguoinhan").value,
+    name: document.getElementById("inputnguoinhan").value,
     phone: document.getElementById("inputsdt").value,
     address: document.getElementById("inputdiachi").value + "-" + tinh,
     thanhtoan: thanhtoan,
@@ -339,15 +349,19 @@ var add_don = function () {
     orderProduct: products,
   };
   loaddon();
+  console.log(item);
   donhang.push(item);
 
   Savedon();
 };
 
+
+
 function xacnhan() {
   $(".thongtins").css("display", "none");
   $("#xacnhandathang").css("display", "block");
 }
+
 function infoCart() {
   var thanhtoan;
   var tinh;

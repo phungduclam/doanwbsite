@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Store</title>
+
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style-1.css">
+    <link rel="stylesheet" href="policy.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v7.0"></script>
+    <script>
+        $('.carousel').carousel({
+            interval: 200
+
+        })
+    </script>
+</head>
+
+<body>
+    <!-- --header-- -->
+    <div class="container-fluid header">
+        <div class="container-fluid fixed-top bg-light">
+
+            <nav class=" navbar  navbar-expand-lg">
+                <a href="index.html" class="navbar-brand">
+                    <div class="logo">
+                        <img src="./img/logo-shopdongho.png" alt="">
+                    </div>
+                </a>
+                <button class="navbar-toggler menu" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <i class="fas fa-bars"></i>
+                    </span>
+                </button>
+                <div id="my-nav" class="collapse navbar-collapse">
+                    <ul class="navbar-nav mr-auto header-menu">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">TRANG CHỦ <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#productsSkirt" tabindex="-1" aria-disabled="false">CASINO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#productsShirt" tabindex="-1" aria-disabled="true">ORIENT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#productsPants" tabindex="-1" aria-disabled="true">TISSOT</a>
+                        </li>
+
+                    </ul>
+                    <div class="mr-3 cart">
+                        <a href="#" onclick="checkLogin()">
+                            <i class="fas fa-user"></i>
+                        </a>
+
+
+                        <a class="ml-3 mr-3" href="./cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+
+                        <a class="ml-3 mr-3" href="./cart.html">
+                            <i class="fa-solid fa-phone-flip"></i>
+                        </a>
+                        
+                        <a class="ml-3 mr-3 icon-phone" href="./cart.html">
+                            0389458767
+                            <ion-icon name="call"></ion-icon>
+                        </a>
+
+                    </div>
+                    
+
+                </div>
+            </nav>
+        </div>
+
+    </div>
+
+        <div>
+            <img style="width: 100%;" src="./img/img-aboutwatch.jpg" alt="">
+        </div>
+         <!-- phần dành cho chính sách bảo mật -->
+    <div class="policy_secure"> 
+        <h5>CHÍNH SÁCH BẢO MẬT</h5>
+    </div>
+
+        <div class="infoRequest">
+        <div class="descriptionInfo" >
+            <h3>SHOPDONGHO.com cam kết sẽ bảo mật những thông tin mang tính riêng tư của khách hàng. <br> Quý khách vui lòng đọc bản “Chính sách bảo mật” dưới đây để hiểu hơn những cam kết mà chúng tôi thực hiện, nhằm tôn trọng và bảo vệ quyền lợi của người truy cập:</h3>
+            </div>
+        <h4>Mục đích và phạm vi thu thập:</h4>
+        <div class="detailInfoRequest">
+            <ul class="listRequest">
+                <li>Email</li>
+                <li>Họ tên</li>
+                <li>Số điện thoại liên lạc</li>
+                <li>Tên đăng nhập </li>
+                <li>Địa chỉ</li>
+                <li>Mật khẩu</li>
+            </ul>
+        </div>
+        </div>
+<!-- --footer-- -->
+<div class="container-fluid">
+
+    <!-- --thongtin-- -->
+    <div class="container home-info">
+
+        <div class="row mb-5">
+            <div class="col-3 info-col">
+                <div class="h6">
+                    GỌI MUA HÀNG(8:30 - 17:00)
+                </div>
+                <a href="tel:0389458767">
+
+                    <i class="fas fa-phone-alt"></i>
+                   0389458767
+                </a>
+
+                <div class="info-foot">Tất cả các ngày trong tuần</div>
+            </div>
+            <div class="col-3 info-col">
+                <div class="h6">GỌI MUA HÀNG(8:30 - 17:00) </div>
+
+                <a href="tel:0389458767">
+                    <i class="fas fa-phone-alt"></i>
+                    0389458767
+                </a>
+
+                <div class="info-foot">Tất cả các ngày trong tuần</div>
+            </div>
+
+            <div class="col-3">
+                <div class="h6">ĐĂNG KÍ NHẬN THÔNG TIN MỚI</div>
+                <form action="" class="form-inline">
+                    <input type="text" class="form-control" style="width: 60%;">
+                    <a href="" class=" btn btn-outline-dark">Đăng kí</a>
+                </form>
+            </div>
+            <div class="col-3 info-social">
+                <div class="h6">THEO DÕI CHÚNG TÔI</div>
+                <div class="row">
+                    <div class="col-3">
+                        <a href="https://www.facebook.com/ZeroNorthampton">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                    <div class="col-3">
+                        <a href="https://www.instagram.com/shopzero.sa/">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    <div class="col-3">
+                        <a href="https://www.youtube.com/results?search_query=shop+zero">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    <div class="col-3">
+                        <a href="">
+                            <i class="fab fa-twitter"></i>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- ---- -->
+    <!-- --footer-- -->
+    <div class="container-fluid footer-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-3 link-support">
+                    <div class="h6">HỖ TRỢ KHÁCH HÀNG</div>
+                    <ul>
+                        <li>
+                            <a href="about.html">Giới Thiệu</a>
+                        </li>
+                    
+                        <li>
+                            <a href="policy.html">Chính Sách Bảo Mật</a>
+                        </li>
+
+                        <li>
+                            <a href="about.html">Điều Khoản</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-3 link-support">
+                    <div class="h6">HỆ THỐNG CỬA HÀNG</div>
+                    <ul>
+                        <li>
+                            SHOPDONGHO.COM
+                        </li>
+                        <li class="text">
+                            Địa chỉ: Chung Cư Đông Hải, Tô Ký, Tân Chánh Hiệp, Quận 12  
+                        </li>
+                        <li>
+                            Phone : 0389458767
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-3 link-support">
+                    <div class="h6">VỀ CHÚNG TÔI</div>
+                    <div class="text">Với hơn 20 cửa hàng trải dài cả nước, Germe hy vọng sẽ mang đến sự phục vụ chu
+                        đáo cho tất
+                        cả các khách hàng. Hệ thống cửa hàng thời trang Germe luôn luôn lắng nghe những ý kiến đóng
+                        góp từ các khách hàng với mục tiêu đẩy mạnh dịch vụ, mở rộng hệ thống và làm hài lòng những
+                        vị khách đến trên toàn quốc.</div>
+                </div>
+                <div class="col-3">
+                    <div class="h6">FANPAGE CHÚNG TÔI</div>
+                    <div class="fb-page" data-href="https://www.facebook.com/ZeroNorthampton" data-tabs="timeline"
+                        data-width="360" data-height="200" data-small-header="false"
+                        data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/ZeroNorthampton" class="fb-xfbml-parse-ignore"><a
+                                href="https://www.facebook.com/ZeroNorthampton"></a></blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---- -->
+</div>
+<!-- ---- -->
+</body>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <!-- phần dành cho chính sách bảo mật -->
+
+</body>

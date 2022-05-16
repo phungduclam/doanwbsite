@@ -59,6 +59,7 @@ var deleteUser = function (i) {
 
 var updateUser = function (i) {
   var k = user[i];
+  
   (document.getElementById("id").value = k.id),
     (document.getElementById("username1").value = k.username),
     (document.getElementById("name1").value = k.name),
@@ -76,6 +77,7 @@ var updateUser = function (i) {
 var update = function (i) {
   alert("Thành công");
   var k = user[i];
+  
   (k.id = k.id),
     (k.username = document.getElementById("username1").value),
     (k.name = document.getElementById("name1").value),

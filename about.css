@@ -5,6 +5,9 @@
     font-weight :bold;
 
 }
+.header{
+    z-index: 1;
+}
 
 ion-icon{
     font-size: 15px;
@@ -14,4 +17,25 @@ ion-icon{
     cursor: pointer;
     text-decoration: none;
 }
+
+.content-about{
+    background-color:#fafafa;
+    display: flex;
+    justify-content: space-around;
+    
+    margin-bottom: 16px;
+    padding: 32px;
+}
+
+
+
+.about-us{
+    padding-left: 15px;
+    font-weight: bold;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-top: 16px;
+}
+
 
